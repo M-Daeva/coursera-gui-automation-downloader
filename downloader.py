@@ -19,7 +19,8 @@ def get_downloaders(coords):
         pag.click()
         pag.drag(coords.title_length, duration=1)
         pag.hotkey('ctrl', 'c')
-        data = pyperclip.paste().strip().replace('?', '').replace(':', ' -')
+        data = pyperclip.paste().strip().replace('?', '').replace(':', ' -').replace('"', "'") \
+            .replace('/', ', ')
         pag.click()
 
         pag.moveTo(*coords.play, 0.5)

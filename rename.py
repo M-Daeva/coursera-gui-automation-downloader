@@ -4,11 +4,11 @@ import os
 def with_path(path):
     def rename():
         names = os.listdir(path)
-        temp = list(range(len(names) + 10))
+        temp = list(range(20 * len(names)))
 
         for name in names:
-            [num, *a] = name.split(' ')
-            num = int(num)
+            num = name.split(' ')[0]
+            num = round(10 * float(num))
             temp[num] = name
 
         temp2 = []
