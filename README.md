@@ -1,1 +1,0 @@
-pif.map(cb([item] [,idx] [,arr]), arr)
