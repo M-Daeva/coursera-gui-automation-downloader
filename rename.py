@@ -4,7 +4,7 @@ import os
 def with_path(path):
     def rename():
         names = os.listdir(path)
-        temp = list(range(20 * len(names)))
+        temp = list(range(100 * len(names)))
 
         for name in names:
             num = name.split(' ')[0]
